@@ -1,26 +1,10 @@
 body {
   font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
-#title {
-  background-color: #ff4c68;
-  color: #fff;
-}
-
-h1 {
-  font-weight: 900;
-  font-size: 3.5rem;
-  line-height: 1.5;
-}
-
-h2 {
-  font-weight: bold;
-  font-size: 3rem;
-  line-height: 1.5;
-}
-
-h3 {
-  font-size: 1.5rem;
+h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
@@ -28,9 +12,32 @@ p {
   color: #8f8f8f;
 }
 
+/* Headings */
+.big-heading {
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+/* Containers */
+
 .container-fluid {
-  padding: 3% 15%;
-  overflow: hidden;
+  padding: 7% 15%;
+}
+
+/* Sections */
+.colored-section {
+  background-color: #ff4c68;
+  color: #fff;
+}
+
+.white-section {
+  background-color: #fff;
 }
 
 /* Navigation Bar */
@@ -41,7 +48,7 @@ p {
 .navbar-brand {
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .nav-item {
@@ -50,7 +57,7 @@ p {
 
 .nav-link {
   font-weight: 300;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 /* Download Buttons */
@@ -58,20 +65,36 @@ p {
   margin: 5% 3% 5% 0;
 }
 
-/* Title Image */
-.title-img {
-  transform: rotate(20deg);
-  max-width: 60%;
+/* Title Section */
+#title {
+  background-color: #ff4c68;
+  color: #fff;
+  text-align: left;
+  min-height: 67vh;
+}
+
+#title .container-fluid {
+  padding: 3% 15% 7%;
+}
+
+.title-image {
+  width: 21vw;
+  transform: rotate(25deg);
+  position: absolute;
+  right: 20%;
 }
 
 /* Features */
 #features {
-  padding: 7% 15%;
+  position: relative;
 }
 
 .feature-box {
-  text-align: center;
-  padding: 5%;
+  padding: 4.5%;
+}
+
+.feature-title {
+  font-size: 1.5rem;
 }
 
 .feature-icon {
@@ -85,9 +108,11 @@ p {
 
 /* Testimonials */
 #testimonials {
-  text-align: center;
   background-color: #ef8172;
-  color: #fff;
+}
+.testimonial-text {
+  font-size: 3rem;
+  line-height: 1.5;
 }
 
 .testimonial-img {
@@ -96,14 +121,9 @@ p {
   margin: 20px;
 }
 
-.carousel-item {
-  padding: 7% 15%;
-}
-
 /* Press */
 #press {
   background-color: #ef8172;
-  text-align: center;
   padding-bottom: 3%;
 }
 
@@ -114,8 +134,12 @@ p {
 
 /* Pricing */
 #pricing {
-  text-align: center;
   padding: 100px;
+}
+
+.price-text {
+  font-size: 3rem;
+  line-height: 1.5;
 }
 
 .pricing-column {
@@ -128,29 +152,57 @@ p {
 
 .card-header {
   background-color: #ef8172;
-  color: white;
+  color: #fff;
 }
 
 .btn-outline-free {
   color: #ef8172;
-  outline: solid 1px;
+  outline: 1px solid;
   outline-color: #ef8172;
 }
 
 .btn-outline-free:hover {
-  color: white;
+  color: #fff;
   background-color: #ff4c68;
   border-color: #ff4c68;
 }
 
 .btn-payed {
-  color: white;
+  color: #fff;
   background-color: #ef8172;
   border-color: #ef8172;
 }
 
 .btn-payed:hover {
-  color: white;
+  color: #fff;
   background-color: #ff4c68;
   border-color: #ff4c68;
+}
+
+/* CTA */
+#cta .container-fluid {
+  padding: 5% 15%;
+}
+
+/* Footer */
+#footer{
+  padding: 5% 15% 2.5%;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  margin: 20px 10px;
+}
+
+/* Media Queries */
+@media (max-width: 1199px) {
+  #title {
+    text-align: center;
+  }
+  .title-image {
+    width: 50%;
+    position: static;
+    transform: rotate(0);
+  }
+
 }
